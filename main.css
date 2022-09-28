@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+:root{
+    /*Pallete*/
+    --c50:  #faf5ff;
+    --c100: #f3e8ff;
+    --c200: #e9d5ff;
+    --c300: #d8b4fe;
+    --c400: #c084fc;
+    --c500: #a855f7;
+    --c600: #9333ea;
+    --c700: #7e22ce;
+    --c800: #6b21a8;
+    --c900: #581c87;
+}
+
+/*Grid Formatting*/
+
+main{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: .8fr 3fr 1fr;
+    grid-template-rows: .75fr .8fr 4fr;
+
+}
+
+header{
+    background-color: var(--c50);
+    grid-column: 2 / -1;
+    grid-row: 1;
+}
+
+nav{
+    background-color: var(--c50);
+    grid-column: 2 / -1;
+    grid-row: 2;
+}
+
+.sidebar{
+    background-color: var(--c900);
+    grid-column: 1;
+    grid-row: 1 / -1;
+}
+
+.project-container{
+    background-color: lightgrey;
+    grid-column: 2/3;
+    grid-row: 3/-1;
+}
+
+aside{
+    background-color: lightgrey;
+    grid-column: 3;
+    grid-row: 3/-1;
+}
+
+/* End Grid Formatting */
+
+
+
+
+/*Card and Card Grid Formatting*/
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px,auto));
+    grid-template-rows: minmax(250px,350px);
+    grid-auto-rows: minmax(250px, 350px);
+    gap: 25px;
+    justify-content: center;
+}
+
+.card{
+    background-color: var(--c50);
+
+}
