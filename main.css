@@ -26,7 +26,7 @@ main{
     height: 100vh;
     display: grid;
     grid-template-columns: .8fr 2.5fr 1fr;
-    grid-template-rows: .75fr .8fr 4fr;
+    grid-template-rows: .30fr .45fr 4fr;
 
 }
 
@@ -34,14 +34,12 @@ header{
     background-color: var(--c50);
     grid-column: 2 / -1;
     grid-row: 1;
-    height: 10vh;
 }
 
 nav{
     background-color: var(--c50);
     grid-column: 2 / -1;
     grid-row: 2;
-    height: 10vh;
 }
 
 .sidebar{
@@ -72,23 +70,33 @@ aside{
 
 
 .project-card-container{
+    height: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, clamp(300px, 45%, 500px));
-    grid-template-rows: 1fr 200px;
-    grid-auto-rows: 200px;
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: auto 1fr;
+    grid-auto-rows: 1fr;
+    gap: 1em;
     padding-left: 15px;
 }
 
 .project-card{
-    background-color: var(--c50);
-    border-radius: 10px;
-    border-left: solid var(--c900) 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    background-color: var(--c50);    
+    display: grid;
+    grid-template-columns: auto 1fr;
+    border-radius: 15px;
+
 }
+
+.color-block-left {
+	grid-column: 1;
+	grid-row: 1 / 4;
+	width: 1rem;
+    background: linear-gradient(var(--c200),var(--c900)) ;
+    border-top-left-radius:  15px;
+    border-bottom-left-radius: 15px;
+}
+
+
 
 .project-container-header{
     padding-top: 25px;
@@ -99,13 +107,182 @@ aside{
 /*Aside Card and Aside Card Grid Formatting*/
 
 
-.aside{
+aside{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
 }
+
+aside h1{
+    padding-top: 25px;
+    padding-bottom: 22px;
+    font-size: 30px;
+}
+
+
 
 .aside-card{
     background-color: var(--c50);
+    display: flex;
+    margin-right: 20px;
+}
+
+.user-icon img{
+    height: 40px;
+}
+
+.user-info{
+    display: flex;
+    flex-direction: column;
+}
+
+/*End side card formatting*/
+
+
+
+
+/*Side bar and Side bar grid formatting*/
+.sidebar{
+    display: grid;
+    grid-template-columns: 1.25fr 3.75fr;
+    grid-template-rows: 150px;
+    grid-auto-rows: 50px;
+    color: var(--c50);
+    row-gap: 10px;
+}
+
+.side-bar-header-icon{
+    align-self: end;
+    padding-bottom: 15px;
+}
+
+.side-bar-header-icon img{
+    height: 100px;
+}
+
+.dashboard-header-text{
+    align-self: end;
+    padding-bottom: 25px;
+    font-size: 2rem;
+}
+
+
+
+.sidebar-icon{
+    align-self: center;
+    justify-self: center;
+}
+
+.sidebar-icon img{
+    height: 45px;
+}
+
+.sidebar-text{
+    align-self: center;
+    font-size: 1.15rem;
+}
+
+/*End Side Bar formatting*/
+
+
+
+
+
+
+
+
+
+
+/*Search Bar Formatting*/
+
+.search{
+    margin-top: 15px;
+    display: flex;
+    
+}
+
+.search img{
+    display: block;
+    align-self: center;
+    justify-self: center;
+    padding: 0px 10px 0 15px;
+}
+
+#search-icon{
+    height: 25px;
+}
+
+#alert-icon{
+    height: 25px;
+}
+
+.profile-img-small{
+    height: 40px;
+}
+
+#search-text{
+    flex: 1;
+    margin-right: auto;
+    margin-left: 5px;
+    justify-self: center;
+    align-self: center;
+    height: 30px;
+    border-radius: 30px;
+    border-style: none;
+    background-color: lightgrey;
+    max-width: 750px;
+}
+
+/*End Search Bar formatting*/
+
+
+
+
+
+
+
+
+
+/*Nav bar formatting*/
+nav{
+    display: grid;
+    grid-template-columns: 1fr 2fr 5fr;
+    align-items: center;
+
+}
+
+.profile-img-large-container{
+    place-self: end;
+    padding: 0px 15px 7px 0px;
+}
+
+#profile-img-large{
+    height: 75px;
+}
+
+.greeting-container p{
+    font-size: 1.25em;
+}
+
+.greeting-header{
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+
+
+.nav-buttons{
+    justify-self: end;
+    padding-right: 100px;
+}
+
+.nav-buttons ul>li{
+    display: inline;
+    padding: 5px 25px 5px 25px;
+    margin: 0px 25px 0px 25px;
+    background-color: var(--c500);
+    color: var(--c50);
+    font-size: 1.15rem;
+    border-radius: 15px;
 }
 
