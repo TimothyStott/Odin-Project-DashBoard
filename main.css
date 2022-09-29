@@ -83,7 +83,9 @@ aside{
     background-color: var(--c50);    
     display: grid;
     grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr auto;
     border-radius: 15px;
+    box-shadow: 5px 3px 3px rgba(88, 28, 135, .4);
 
 }
 
@@ -102,6 +104,17 @@ aside{
     padding-top: 25px;
     grid-column: 1 / -1;
 }
+
+
+#github-img{
+    height: 35px;
+}
+
+#preview-img{
+    height: 45px;
+}
+
+
 
 
 /*Aside Card and Aside Card Grid Formatting*/
