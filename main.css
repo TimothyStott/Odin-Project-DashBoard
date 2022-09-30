@@ -25,7 +25,7 @@
 main{
     height: 100vh;
     display: grid;
-    grid-template-columns: .8fr 2.5fr 1fr;
+    grid-template-columns: auto 2.5fr 1fr;
     grid-template-rows: .30fr .45fr 4fr;
 
 }
@@ -77,6 +77,7 @@ aside{
     grid-auto-rows: 1fr;
     gap: 1em;
     padding-left: 15px;
+    margin-right: 10px;
 }
 
 .project-card{
@@ -123,31 +124,47 @@ aside{
 aside{
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    padding: 2rem 2rem 0px 1rem;
 }
 
-aside h1{
-    padding-top: 25px;
-    padding-bottom: 22px;
-    font-size: 30px;
+.announcments-container{
+    display: grid;
+    grid-template-rows: auto ;
+    grid-auto-rows: auto;
+    row-gap: 1rem;
 }
 
-
-
-.aside-card{
+.announcment-card{
     background-color: var(--c50);
-    display: flex;
-    margin-right: 20px;
+    display: grid;
+    grid-auto-rows: auto;
+    row-gap: 1rem;
+    padding: 1rem;
+    border-radius: 15px;
 }
 
-.user-icon img{
+.trending-container, .trending-card-container{
+    display: grid;
+    grid-auto-rows: auto;
+    row-gap: 1em;
+    padding-top: 1em;
+}
+
+.trending-card-container{
+    background-color: var(--c50);
+    border-radius: 15px;
+    padding: 1rem;
+}
+
+.trending-card{
+    display: grid;
+    grid-template-columns: auto 1fr;   
+}
+
+.trending-card img{
     height: 40px;
 }
 
-.user-info{
-    display: flex;
-    flex-direction: column;
-}
 
 /*End side card formatting*/
 
@@ -157,28 +174,35 @@ aside h1{
 /*Side bar and Side bar grid formatting*/
 .sidebar{
     display: grid;
-    grid-template-columns: 1.25fr 3.75fr;
-    grid-template-rows: 150px;
-    grid-auto-rows: 50px;
+    grid-template-columns: .5fr auto;
+    grid-template-rows: 8rem;
+    grid-auto-rows: 2.75rem;
     color: var(--c50);
-    row-gap: 10px;
+    row-gap: 1rem;
+    padding-right: 2rem;
 }
 
 .side-bar-header-icon{
+    transition: .5s ease-in-out;
     align-self: end;
+    justify-self: center;
     padding-bottom: 15px;
+    padding-right: .5rem;
+}
+
+.side-bar-header-icon:hover{
+    transform: rotate(90deg);
 }
 
 .side-bar-header-icon img{
-    height: 100px;
+    height: 80px;
 }
 
 .dashboard-header-text{
     align-self: end;
     padding-bottom: 25px;
-    font-size: 2rem;
+    font-size: 2rem;    
 }
-
 
 
 .sidebar-icon{
@@ -297,5 +321,17 @@ nav{
     color: var(--c50);
     font-size: 1.15rem;
     border-radius: 15px;
+}
+
+
+
+
+/*Minimize Formatting*/
+.transitional-text{
+    transition: font-size .75s;
+}
+
+.reduce-to-zero{
+    font-size: 0px;
 }
 
