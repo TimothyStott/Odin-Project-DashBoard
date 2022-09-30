@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
     font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
-:root{
+:root {
     /*Pallete*/
-    --c50:  #faf5ff;
+    --c50: #faf5ff;
     --c100: #f3e8ff;
     --c200: #e9d5ff;
     --c300: #d8b4fe;
@@ -22,7 +22,7 @@
 
 /*Grid Formatting*/
 
-main{
+main {
     height: 100vh;
     display: grid;
     grid-template-columns: auto 2.5fr 1fr;
@@ -30,31 +30,31 @@ main{
 
 }
 
-header{
+header {
     background-color: var(--c50);
     grid-column: 2 / -1;
     grid-row: 1;
 }
 
-nav{
+nav {
     background-color: var(--c50);
     grid-column: 2 / -1;
     grid-row: 2;
 }
 
-.sidebar{
+.sidebar {
     background-color: var(--c900);
     grid-column: 1;
     grid-row: 1 / -1;
 }
 
-.project-container{
+.project-container {
     background-color: lightgrey;
     grid-column: 2/3;
     grid-row: 3/-1;
 }
 
-aside{
+aside {
     background-color: lightgrey;
     grid-column: 3;
     grid-row: 3/-1;
@@ -69,7 +69,7 @@ aside{
 
 
 
-.project-card-container{
+.project-card-container {
     height: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -80,38 +80,60 @@ aside{
     margin-right: 10px;
 }
 
-.project-card{
-    background-color: var(--c50);    
+.project-container-header {
+    padding-top: 25px;
+    grid-column: 1 / -1;
+}
+
+
+.project-card {
+    background-color: var(--c50);
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: auto 1fr auto;
     border-radius: 15px;
     box-shadow: 5px 3px 3px rgba(88, 28, 135, .4);
 
 }
 
 .color-block-left {
-	grid-column: 1;
-	grid-row: 1 / 4;
-	width: 1rem;
-    background: linear-gradient(var(--c200),var(--c900)) ;
-    border-top-left-radius:  15px;
+    grid-column: 1;
+    grid-row: 1 / 4;
+    width: 1rem;
+    background: linear-gradient(var(--c200), var(--c900));
+    border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
 }
 
-
-
-.project-container-header{
-    padding-top: 25px;
-    grid-column: 1 / -1;
+.project-card-header {
+    padding: 1rem;
+    font-size: 1.25rem;
 }
 
+.project-card-text {
+    padding: 1rem 1rem .5rem 1rem;
+    font-size: 1.25rem;
+}
 
-#github-img{
+.project-card-nav-images {
+
+    padding: 0 1rem 1rem 0;
+    align-content: center;
+    display: flex;
+    justify-content: end;
+
+}
+
+#github-img, #preview-img {
+	place-self: center;
+	padding: 0 .5rem 0 .5rem;
+}
+
+#github-img {
     height: 35px;
 }
 
-#preview-img{
+#preview-img {
     height: 45px;
 }
 
@@ -121,20 +143,20 @@ aside{
 /*Aside Card and Aside Card Grid Formatting*/
 
 
-aside{
+aside {
     display: flex;
     flex-direction: column;
     padding: 2rem 2rem 0px 1rem;
 }
 
-.announcments-container{
+.announcments-container {
     display: grid;
-    grid-template-rows: auto ;
+    grid-template-rows: auto;
     grid-auto-rows: auto;
     row-gap: 1rem;
 }
 
-.announcment-card{
+.announcment-card {
     background-color: var(--c50);
     display: grid;
     grid-auto-rows: auto;
@@ -143,29 +165,30 @@ aside{
     border-radius: 15px;
 }
 
-.trending-container, .trending-card-container{
+.trending-container,
+.trending-card-container {
     display: grid;
     grid-auto-rows: auto;
     row-gap: 1em;
     padding-top: 1em;
 }
 
-.trending-card-container{
+.trending-card-container {
     background-color: var(--c50);
     border-radius: 15px;
     padding: 1rem;
 }
 
-.trending-card{
+.trending-card {
     display: grid;
-    grid-template-columns: auto 1fr;   
+    grid-template-columns: auto 1fr;
 }
 
-.trending-card img{
+.trending-card img {
     height: 40px;
 }
 
-.user-info{
+.user-info {
     padding-left: .75rem;
 }
 
@@ -176,7 +199,7 @@ aside{
 
 
 /*Side bar and Side bar grid formatting*/
-.sidebar{
+.sidebar {
     display: grid;
     grid-template-columns: .5fr auto;
     grid-template-rows: 8rem;
@@ -185,7 +208,7 @@ aside{
     padding-right: 2rem;
 }
 
-.side-bar-header-icon{
+.side-bar-header-icon {
     transition: .5s ease-in-out;
     align-self: end;
     justify-self: center;
@@ -193,31 +216,31 @@ aside{
     padding-right: .5rem;
 }
 
-.side-bar-header-icon:hover{
+.side-bar-header-icon:hover {
     transform: rotate(90deg);
 }
 
-.side-bar-header-icon img{
+.side-bar-header-icon img {
     height: 80px;
 }
 
-.dashboard-header-text{
+.dashboard-header-text {
     align-self: end;
     padding-bottom: 25px;
-    font-size: 2rem;    
+    font-size: 2rem;
 }
 
 
-.sidebar-icon{
+.sidebar-icon {
     align-self: center;
     justify-self: center;
 }
 
-.sidebar-icon img{
+.sidebar-icon img {
     height: 30px;
 }
 
-.sidebar-text{
+.sidebar-text {
     align-self: center;
     font-size: 1rem;
 }
@@ -235,32 +258,32 @@ aside{
 
 /*Search Bar Formatting*/
 
-.search{
+.search {
     margin-top: 15px;
     display: flex;
-    
+
 }
 
-.search img{
+.search img {
     display: block;
     align-self: center;
     justify-self: center;
     padding: 0px 10px 0 15px;
 }
 
-#search-icon{
+#search-icon {
     height: 25px;
 }
 
-#alert-icon{
+#alert-icon {
     height: 25px;
 }
 
-.profile-img-small{
+.profile-img-small {
     height: 40px;
 }
 
-#search-text{
+#search-text {
     flex: 1;
     margin-right: auto;
     margin-left: 5px;
@@ -284,39 +307,39 @@ aside{
 
 
 /*Nav bar formatting*/
-nav{
+nav {
     display: grid;
     grid-template-columns: 1fr 2fr 5fr;
     align-items: center;
 
 }
 
-.profile-img-large-container{
+.profile-img-large-container {
     place-self: end;
     padding: 0px 15px 7px 0px;
 }
 
-#profile-img-large{
+#profile-img-large {
     height: 75px;
 }
 
-.greeting-container p{
+.greeting-container p {
     font-size: 1.25em;
 }
 
-.greeting-header{
+.greeting-header {
     font-weight: bold;
     font-size: 1.25em;
 }
 
 
 
-.nav-buttons{
+.nav-buttons {
     justify-self: end;
     padding-right: 100px;
 }
 
-.nav-buttons ul>li{
+.nav-buttons ul>li {
     display: inline;
     padding: 5px 25px 5px 25px;
     margin: 0px 25px 0px 25px;
@@ -330,11 +353,10 @@ nav{
 
 
 /*Minimize Formatting*/
-.transitional-text{
+.transitional-text {
     transition: font-size .75s;
 }
 
-.reduce-to-zero{
+.reduce-to-zero {
     font-size: 0px;
 }
-
