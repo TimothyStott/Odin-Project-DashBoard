@@ -294,6 +294,7 @@ aside {
     border-style: none;
     background-color: lightgrey;
     max-width: 750px;
+    padding-left: 5px;
 }
 
 /*End Search Bar formatting*/
