@@ -107,12 +107,12 @@ aside {
 
 .project-card-header {
     padding: 1rem;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
 }
 
 .project-card-text {
     padding: 1rem 1rem .5rem 1rem;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
 }
 
 .project-card-nav-images {
@@ -124,13 +124,14 @@ aside {
 
 }
 
-#github-img, #preview-img {
+.project-card-nav-links {
 	place-self: center;
-	padding: 0 .5rem 0 .5rem;
 }
 
 #github-img {
     height: 35px;
+	padding: 0 .7rem 0 .7rem;
+
 }
 
 #preview-img {
@@ -160,9 +161,23 @@ aside {
     background-color: var(--c50);
     display: grid;
     grid-auto-rows: auto;
-    row-gap: 1rem;
+    row-gap: 1.25rem;
     padding: 1rem;
     border-radius: 15px;
+}
+
+
+.announcment-text{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.color-block-grey{
+    height: .2rem;
+    width: 75%;
+    border-radius: 25px;
+    background-color: var(--c400);
 }
 
 .trending-container,
@@ -240,9 +255,15 @@ aside {
     height: 30px;
 }
 
-.sidebar-text {
+.sidebar-text{
+    display: flex;
+}
+
+.sidebar-text a
+{
+    color: var(--c50);
+    text-decoration: none;
     align-self: center;
-    font-size: 1rem;
 }
 
 /*End Side Bar formatting*/
@@ -340,14 +361,52 @@ nav {
     padding-right: 100px;
 }
 
-.nav-buttons ul>li {
+.nav-buttons ul>li  {
     display: inline;
+
+}
+
+.nav-buttons a{
+    color: var(--c50);
+    font-size: 1.15rem;
+    text-decoration: none;
     padding: 5px 25px 5px 25px;
     margin: 0px 25px 0px 25px;
     background-color: var(--c500);
-    color: var(--c50);
-    font-size: 1.15rem;
     border-radius: 15px;
+}
+
+
+/*Hover Formatting*/
+
+.project-card:hover{
+    transform: translateY(-3px) scale(1.01);
+    transition: ease-in-out 100ms;
+    
+}
+
+
+.sidebar-icon:hover{
+    transform: scale(1.2);
+    transition: ease-in-out 75ms;
+}
+
+.sidebar-text:hover{
+    font-weight: bold;
+    font-size: 1.19rem;
+    transition: ease-in-out 100ms;
+}
+
+.nav-buttons a:hover{
+    color: var(--c800);
+    background-color: var(--c50);
+    transition: ease-in-out 100ms;
+}
+
+
+.project-card-nav-link img:hover{
+    scale: 1.1;
+    transition: ease-in-out 100ms;
 }
 
 
@@ -361,3 +420,5 @@ nav {
 .reduce-to-zero {
     font-size: 0px;
 }
+
+
